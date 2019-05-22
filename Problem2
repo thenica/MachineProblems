@@ -1,0 +1,82 @@
+// A program that would compute values based on the given sides of triangle.
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+//To classify whether equilateral, isosceles,or scalene triangle.
+int EIS (int A, int  B, int C)
+{
+int A1;
+int A2;
+int A3;
+if(A1==A2 && A2==A3)                 
+   cout << "It is a Equilateral triangle\n";
+// at least 2 sides equal
+else if(A1==A2 || A1==A3 || A2==A3)   
+	cout << "It is a Isosceles triangle\n";
+// no sides equal
+else                                
+	cout << "It is a Scalene triangle\n"; 
+}
+// To classify whether acute, right, or obtuse triangle	
+int ARO (int A1, int A2, int A3)
+{
+	int A;
+	int B; 
+	int C;
+	//To classify whether acute, right, or obtuse triangle.
+    //All angles are less than 90 it is a Acute Triangle 
+	    if (A==90 || B==90 || C==90)
+	    	cout <<"It is a Acute Triangle\n";
+	// Has a right angle or 90 degrees it is a Right Triangle
+	    else if (A<=90 || B<=90 || C<=90)
+	    	cout <<"It is a Right Triangle\n";
+	    else
+	    	cout <<"It is a Obtuse triangle\n";
+}
+int main()
+{
+    double A1, A2, A3;
+    double A, B, C;
+    int base, height, area;
+    double a=0, b=0, c=0;
+    // Enter values of 3 angles
+ 	cout << "Enter the 3 values of angles in the triangle: ";
+    cin>> A1 >> A2 >> A3;
+    
+	cout << EIS (A1, A2, A3);
+	cout << "Enter  Base of Triangle = ";
+	cin >> base;
+	cout << "Enter  Height of Triangle = ";
+	cin >> height;
+	area = 0.5*(base*height);
+	cout << "Area of Triangle = " << area << endl;
+	
+        // read in the 3 number
+    cout << "Please Enter Side A:"; cin >> A; cin.clear(); cin.ignore(255, '\n');
+    cout << "Please Enter Side B:"; cin >> B; cin.clear(); cin.ignore(255, '\n');
+    cout << "Please Enter Side C:"; cin >> C; cin.clear(); cin.ignore(255, '\n');
+        // Test Validity
+    double perimeter = 0.0;
+    if( (A+B )<=C || (B+C )<=A || (C+A)<=B ) {
+            // Invalid Triangle
+        cout << endl << "The Triangle Is Invalid." << endl;
+    }
+    else 
+	{ // Valid Triangle
+        cout << "The Perimeter Of The Triangle Is " << (A+B+C) << endl;
+    }
+
+	cout << ARO (A1, A2, A3);
+    system("pause");
+    
+	}
+// RUNNING BUT OUTPUT IS INCORRECT
+	
+
+
+
+	
+ 
+
+    
