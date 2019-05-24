@@ -10,13 +10,16 @@ int main()
 	char op;
 	float p, ar, circumcenter, apothem;
 	
-	cout << "Enter side lengths";
+	cout << "Enter side lengths"<<"\n";
 	cout << "Side A: "; 
 	cin >> sideA;
+	cout <<"\n";
 	cout << "Side B: ";
 	cin>>sideB;
+	cout <<"\n";
 	cout <<"Side C: "; 
 	cin >>sideC;
+	cout <<"\n";
     
 if(sideA==sideB && sideB==sideC && sideC==sideA && sideA>0 && sideB>0 && sideC>0)  
 {
