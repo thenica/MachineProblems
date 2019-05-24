@@ -23,9 +23,9 @@ int main()
     
 if(sideA==sideB && sideB==sideC && sideC==sideA && sideA>0 && sideB>0 && sideC>0)  
 {
-	angleA==60;
-	angleB==60;
-	angleC==60;
+	angleA=60;
+	angleB=60;
+	angleC=60;
 
  p=sideA+sideB+sideC;
  ar=(pow(sideA,2))*(sqrt(3)/sqrt(4));
@@ -33,7 +33,7 @@ if(sideA==sideB && sideB==sideC && sideC==sideA && sideA>0 && sideB>0 && sideC>0
  apothem=((sideA)*(sqrt(3)/sqrt(6)));
  cout <<"Interior angles: " <<angleA<<", "<<angleB<<", "<<angleC<<"\n";
  cout << "It is a Equilateral triangle\n";
- cout <<"Perimeter: "<< p;
+ cout <<"Perimeter: "<< p<<"\n";
  cout <<"Area: "<<ar<<"\n";
  cout <<"It is a Acute Triangle\n";
  cout <<"Apothem: "<< apothem<<"\n";
@@ -67,9 +67,9 @@ else if(sideA==sideB && sideA!=sideC && sideC>0)
 	else if(sideA==sideC && sideB!=sideA && sideA>0 && sideB>0 && sideC>0) 
 	{
 		float height =sqrt(pow (sideA,2))- sqrt (pow(sideC/2,2) );
-		float interiorAngleA=(pow(sideB,2)+pow(sideC,2)-pow(sideA,2))/2*(sideB*sideC);
-		float interiorAngleB=(pow(sideC,2)+pow(sideA,2)-pow(sideB,2))/2*(sideC*sideA);
-		float interiorAngleC=(pow(sideA,2)+pow(sideB,2)-pow(sideC,2))/2*(sideA*sideB);
+		float interiorAngleA=pow(sideB,2)+pow(sideC,2)-pow(sideA,2)/2*(sideB*sideC);
+		float interiorAngleB=pow(sideC,2)+pow(sideA,2)-pow(sideB,2)/2*(sideC*sideA);
+		float interiorAngleC=pow(sideA,2)+pow(sideB,2)-pow(sideC,2)/2*(sideA*sideB);
 		float A=acos(interiorAngleA);
 		float B=acos(interiorAngleB);
 		float C=acos(interiorAngleC);
@@ -100,7 +100,7 @@ else if(sideA==sideB && sideA!=sideC && sideC>0)
 		float area=((sideA)*sqrt(4*pow(sideB,2)-pow(sideA,2)/4));
 		float circumscribe=(sideC/2*sin(interiorAngleC));
 		float apothem=(sideA*sqrt(2*sideC)-sideA/(2*sideC)+sideA/2);
-		cout <<"Interior Angles: "<< "A= "<< A<<", " << "B= " << B <<"C= " <<C<<"\n";
+		cout <<"Interior Angles: "<< "A= "<< A <<", " << "B= " << B <<"C= " <<C<<"\n";
 		cout << "It is a Isosceles triangle\n";
 		cout <<"Area = "<<area<<"\n";
 		cout <<"Perimeter = "<< p <<"\n";
