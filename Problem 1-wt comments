@@ -1,0 +1,638 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+		string names[50];
+	int #include <iostream>
+#include <string>
+
+using namespace std;
+
+string names[50];
+// Declare all the variables used
+	int x,y,z; 
+	int quiz1[50]; 
+	int quiz2[50];
+	int quiz3[50]; 
+	int quiz4[50];
+	int prelims[50];
+	int finals[50];
+	int ntbk[50];
+	float ntbkper[50];
+	int sw1[50];
+	int sw2[50]; 
+	int sw3[50]; 
+	int sw4[50];
+	int sw5[50];
+	int sw6[50]; 
+	int sw7[50]; 
+	int sw8[50]; 
+	int sw9[50];
+	int sw10[50];
+	float brdwrks[50];
+	float brdwrksA[50];
+	float brdwrksB[50];
+	int sumquizzes[50];
+	float quizper[50];
+	int sumexams[50];
+	float examper[50];
+	int sumsw[50];
+	float swper[50];
+	float finalgrade[50];
+	char arr[50];
+	float temp;
+
+int main()
+{
+	cout << "Academic Class Record\n\n ";
+	cout << "This program shows the list of students with their academic performance and the list of the Top 10 Students in the class. \n\n";
+	//Ask the user to input 50 student names
+	cout << "Enter Students Name\n"; 	
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": ";
+		getline(cin, names[x]);
+	}
+	//Input the scores of 50 students in their quiz 1 
+	cout<<"Enter grades for Quiz1";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> quiz1[x];
+        if (quiz1[x]>100 || quiz1[x]<0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+		//Input the scores of 50 students in their quiz 2
+    cout<<"Enter grades for Quiz2";
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> quiz2[x];
+		if (quiz2[x] > 100 || quiz2[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+		//Input the scores of 50 students in their quiz 3
+	cout<<"Enter grades for Quiz3";
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> quiz3[x];
+		if (quiz3[x] > 100 || quiz3[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+		//Input the scores of 50 students in their quiz 4
+	cout<<"Enter grades for Quiz4";
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> quiz4[x];
+		if (quiz4[x] > 100 || quiz4[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+		//Input the scores of  50 students in their preliminary exam
+		 cout<<"Enter grades for Preliminary Exam";
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> prelims[x];
+		if (prelims[x] > 100 || prelims[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+		//Input the scores of 50 students in their final exam
+	cout<<"Enter grades for Final Exam";
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> finals[x];
+		if (finals[x] > 100 || finals[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+		// Class Standing Component 
+		//Input the scores of 50 students in their notebook
+	cout <<"Enter grades for Notebook";
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> ntbk[x];
+	    if (ntbk[x]>100 || ntbk[x]<0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+		//Input the scores of 50 students in their seatwork 1
+	cout <<"Enter grades for Seatwork 1";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw1[x];
+        if (sw1[x] > 10 || sw1[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}	
+	//Input the scores of 50 students in their seatwork 2
+	cout <<"Enter grades for Seatwork 2";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw2[x];
+        if (sw2[x] > 10 || sw2[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+	//Input the scores of 50 students in their seatwork 3
+	cout <<"Enter grades for Seatwork 3";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1 <<": "<<names[x]<<": \t\t";
+        cin >> sw3[x];
+        if (sw3[x] > 10 || sw3[x] < 0)
+        {
+        	cout <<"Invalid";
+        	return 0;
+		}
+	}
+	//Input the scores of 50 students in their seatwork 4
+	cout <<"Enter grades for Seatwork 4";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw4[x];
+        if (sw4[x] > 10 || sw4[x] < 0)
+        {
+        	cout <<"Invalid";
+        	return 0;
+		}
+	}
+	//Input the scores of 50 students in their seatwork 5
+	cout <<"Enter grades for Seatwork 5";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1 <<": "<<names[x]<<": \t\t";
+        cin >> sw5[x];
+        if (sw5[x] > 10 || sw5[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+	//Input the scores of 50 students in their seatwork 6
+	cout <<"Enter grades for Seatwork 6";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw6[x];
+        if (sw6[x] > 10 || sw6[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+	//Input the scores of 50 students in their seatwork 7
+	cout <<"Enter grades for Seatwork 7";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw7[x];
+        if (sw7[x] > 10 || sw7[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+	//Input the scores of 50 students in their seatwork 8
+	cout <<"Enter grades for Seatwork 8";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw8[x];
+        if (sw8[x] > 10 || sw8[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+	//Input the scores of 50 students in their seatwork 9
+	cout <<"Enter grades for Seatwork 9";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw9[x];
+        if (sw9[x] > 10 || sw9[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+	//Input the scores of 50 students in their seatwork 10
+	cout <<"Enter grades for Seatwork 10";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw10[x];
+        if (sw10[x] > 10 || sw10[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+	//Input the points gained by the students in board work
+	cout <<" Boardworks";
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1<<": "<<names[x]<<": \t\t";
+		cin >> brdwrks[x];
+		if (brdwrks[x] < 0)
+		{
+			cout<<"Invalid";
+        	return 0;
+		}
+	}
+	
+	//////////////        COMPUTATION PART         ////////////////////
+	
+	// Grade component 1 is quizzes
+	// The students has 4 quizzes that are all equal to 100
+	for (x = 0; x < 50; x++)
+	{
+		sumquizzes[x] = quiz1[x] + quiz2[x] + quiz3[x] + quiz4[x];
+		quizper[x] = sumquizzes[x]*0.15;     // each quiz has a weight of 15%
+	}
+	
+	// Class standing equivalent to 5% of the total grade
+	// Class standing grade is added on the top of the final grades of the students 
+	
+	// Class Standing Component 1: NOTEBOOK over 100
+	for (x = 0; x < 50; x++)
+	{
+		ntbkper[x] = ntbk[x]*0.01;    //Notebook is equivalent to 1%
+	}
+	// Class Standing component 2: SEAT WORKS 
+	//Total of 10 seatworks is given to each students
+	// One seatwork is total to 10 points 
+	for (x = 0; x < 50; x++)
+	{
+		sumsw[x] = sw1[x] + sw2[x] + sw3[x] + sw4[x] + sw5[x] + sw6[x] + sw7[x] + sw8[x] + sw9[x] + sw10[x];
+		swper[x] = sumsw[x]*0.02;	// Seatworks are equivalent to 2% of class standing grade
+	}
+	// The student who has the highest board work points will earn the 2% of the class standing grade
+	y = 0;
+	for (x = 0; x < 50; x++)
+	{
+		if (brdwrks[y] < brdwrks[x])
+		y = x;
+	}
+	z = brdwrks[y];
+	for (x = 0; x < 50; x++)
+	{
+	    if(brdwrks[x] = z)
+    	{
+    		brdwrksA[x] = brdwrksB[x]/z;
+			brdwrksB[x] = brdwrksA[x]*2;
+		}
+    	else
+    	{
+			brdwrksB[x] = 2;
+		}
+    }
+    //Final Raw Grade Computation 
+	for (x = 0; x < 50; x++)
+    {
+    	finalgrade[x] = brdwrksB[x] + swper[x] + ntbkper[x] + examper[x] + quizper[x];
+    	// Output the Final raw grade of the students 
+		cout<<"The Raw Grade of  "<< names[x] <<": "<< finalgrade[x] <<"\n";   	
+	}
+	//The corresponding grade point average (GPA) of each students based on the transmutation table
+	for (x = 0; x < 50; x++)
+	{
+		cout<<"The Final Grade of " << "= " << "\n";
+		if(finalgrade[x] > 95.57 && 105 > finalgrade[x])
+		{
+			// Corresponding GPA of students with a raw grade between 95.57 to 100
+			cout << "1.0"; 
+		}
+		else if(finalgrade[x] > 91.12 && 95.56 > finalgrade[x])
+		{
+			// Corresponding GPA of students with a raw grade between 91.12 to 95.56 
+			cout<<"1.25";
+		}
+		else if(finalgrade[x] > 86.68 && 91.11 > finalgrade[x])
+		{
+			// Corresponding GPA of students with a raw grade between 82.23 to 86.67
+			cout<<"1.50";
+		}
+		else if(finalgrade[x] > 82.23 && 86.67 > finalgrade[x])
+		{
+			// Corresponding GPA of students with a raw grade between 82.23 to 86.67
+			cout<<"1.75";
+		}
+		else if(finalgrade[x] > 77.79 && 82.22 > finalgrade[x])
+		{
+			// Corresponding GPA of students with a raw grade between 77.79 to 82.22
+			cout<<"2.00";
+		}
+		else if(finalgrade[x] > 73.34 && 77.78 > finalgrade[x])
+		{
+			// Corresponding GPA of students with a raw grade between 73.34 to 77.78
+			cout<<"2.25";
+		}
+		else if(finalgrade[x] > 68.90 && 73.33 > finalgrade[x])
+		{
+			// Corresponding GPA of students with a raw grade between 68 to 73.33
+			cout<<"2.50";
+		}
+		else if(finalgrade[x] > 64.45 && 68.89 > finalgrade[x])
+		{
+			// Corresponding GPA of students with a raw grade between 64.45 to 68.89
+			cout<<"2.75";
+		}
+		else if(finalgrade[x] > 60.00 && 64.44 > finalgrade[x])
+		{
+			// Corresponding GPA of students with a raw grade between 60.00 to 64.44
+			cout<<"3.00";
+		}
+	}
+	// Displays whether a student passed or failed the subject
+	for (x = 0; x < 50; x++)
+	{
+		if (finalgrade[x] > 60.00)
+		cout << "PASSED";
+		if (finalgrade[x] < 60.00)
+		cout << "FAILED";
+	}
+	// To determine who are the top 10 performing students in the class
+		//Selection sort is used to determine the top 10 performing students in the class
+	for(x = 0; x < 50; x++)
+    {
+        for(y = x + 1; y < 50; y++)
+        {
+            if(finalgrade[x] > finalgrade[y])	
+            {
+            	    temp = finalgrade[x];
+        			finalgrade[x] = finalgrade[y];
+        			finalgrade[y] = temp;
+            }
+        }
+    }
+	// Display the top 10 performing students in the class with their final grade
+	cout << "Top 10 list";  
+	for(x = 0; x < 10; x++)
+	{
+		cout << finalgrade[x] << "\n";
+	}
+	return 0;
+}x,y,z;
+	int quiz1[50]; 
+	int quiz2[50];
+	int quiz3[50]; 
+	int quiz4[50];
+	int prelims[50];
+	int finals[50];
+	int ntbk[50];
+	float ntbkper[50];
+	int sw1, sw2, sw3, sw4, sw5, sw6, sw7, sw8, sw9, sw10;
+	float brdwrks[50];
+	float brdwrksA, brdwrksB[50];
+	int sumquizzes[50];
+	float quizper[50];
+	int sumexams[50];
+	float examper[50];
+	int sumsww[50];
+	float swper[50];
+	float percentage[50];
+	char arr[50];
+	float temp;
+	
+	cout << "Academic Class Record\n\n ";
+	cout << "This program shows the list of students with their academic performance and the list of the Top 10 Students in the class. \n\n";
+	cout << "Enter Students Name\n";
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": ";
+		getline(cin, names[x]);
+	}
+	cout <<“Enter grades for quiz 1”;
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> quiz1[x];
+		if (quiz1[x] > 100 || quiz1[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+		cout <<“Enter grades for quiz 2”;
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> quiz2[x];
+		if (quiz2[x] > 100 || quiz2[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+		cout <<“Enter grades for quiz 3”;
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> quiz3[x];
+		if (quiz3[x] > 100 || quiz3[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+		cout <<“Enter grades for quiz 4”;
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> quiz4[x];
+		if (quiz4[x] > 100 || quiz4[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+	
+	cout <<“Enter grades for Preliminary Exams”;
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> prelims[x];
+		if (prelims[x] > 100 || prelims[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+
+cout <<“Enter grades for Final Exams”;
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> finals[x];
+		if (finals[x] > 100 || finals[x] < 0)
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+
+cout <<"Enter grades for Notebook";
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1 << ": " << names[x] << ": \t\t";
+		cin >> ntbk[x];
+		if (ntbk[x] > 100; || ntbk[x] < 0 );
+		{
+			cout << "Invalid";
+			return 0;
+		}
+	}
+cout <<"Enter grades for Seatwork 2";
+    for (x = 0; x < 50; x++)
+    {
+    	cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw2[x];
+        if (sw2[x] > 10 || sw2[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+cout <<"Enter grades for Seatwork 3";
+    for (x = 0; x < 50; x++)
+    {
+    	cout << x + 1 <<": "<<names[x]<<": \t\t";
+        cin >> sw3[x];
+        if (sw3[x] > 10 || sw3[x] < 0)
+        {
+        	cout <<"Invalid";
+        	return 0;
+		}
+	}
+cout <<"Enter grades for Seatwork 4";
+    for (x = 0; x < 50; x++)
+    {
+    	  cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw4[x];
+        if (sw4[x] > 10 || sw4[x] < 0)
+        {
+        	cout <<"Invalid";
+        	return 0;
+		}
+	}
+      
+cout <<"Enter grades for Seatwork 5";
+    for (x = 0; x < 50; x++)
+    {
+		cout << x + 1 <<": "<<names[x]<<": \t\t";
+        cin >> sw5[x];
+        if (sw5[x] > 10 || sw5[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}   
+ 
+cout <<"Enter grades for Seatwork 6";
+    for (x = 0; x < 50; x++)
+    {
+    	cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw6[x];
+        if (sw6[x] > 10 || sw6[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+
+cout <<"Enter grades for Seatwork 7";
+    for (x = 0; x < 50; x++)
+    {
+    	 cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw7[x];
+        if (sw7[x] > 10 || sw7[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+cout <<"Enter grades for Seatwork 8";
+    for (x = 0; x < 50; x++)
+    {
+    	  cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw8[x];
+        if (sw8[x] > 10 || sw8[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+cout <<"Enter grades for Seatwork 9";
+    for (x = 0; x < 50; x++)
+    {
+    	   cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw9[x];
+        if (sw9[x] > 10 || sw9[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+
+cout <<"Enter grades for Seatwork 10";
+    for (x = 0; x < 50; x++)
+    {
+    	 cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> sw10[x];
+        if (sw10[x] > 10 || sw10[x] < 0)
+        {
+        	cout<<"Invalid";
+        	return 0;
+		}
+	}
+       
+cout <<" Boardworks";
+	for (x = 0; x < 50; x++)
+	{
+		cout << x + 1<<": "<<names[x]<<": \t\t";
+		cin >> brdwrks[x];
+		if (brdwrks[x] < 0)
+		{
+			cout<<"Invalid";
+        	return 0;
+		}
+	}
+	return 0;
+
+}
+
+	
